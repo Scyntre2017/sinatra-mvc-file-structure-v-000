@@ -8,7 +8,7 @@ describe ApplicationController do
     end
 
     it 'can read dog name' do
-      @dog = Dog.new("rudolph", "mastiff", 2)
+      @dog = Dog.new({:name => "rudolph", :breed => "mastiff", :age => 2})
       expect(@dog.name).to eq("rudolph")
     end
 
