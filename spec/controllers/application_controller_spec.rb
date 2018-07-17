@@ -3,13 +3,13 @@ require 'pry'
 describe ApplicationController do
   describe 'Dog class' do
     it 'can create a dog with attributes on initialization' do
-      Dog.new(:name => "rudolph", :breed => "mastiff", :age => 2)
-      binding.pry
+      @dog = Dog.new(:name => "rudolph", :breed => "mastiff", :age => 2)
+      @dog.save
       expect(Dog.all.count).to eq (1)
     end
 
     it 'can read dog name' do
-      @dog = Dog.new({:name => "rudolph", :breed => "mastiff", :age => 2})
+      @dog = Dog.new(:name => "rudolph", :breed => "mastiff", :age => 2)
       expect(@dog.name).to eq("rudolph")
     end
 
