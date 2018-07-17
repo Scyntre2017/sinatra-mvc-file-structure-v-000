@@ -4,6 +4,7 @@ describe ApplicationController do
   describe 'Dog class' do
     it 'can create a dog with attributes on initialization' do
       Dog.new(:name => "rudolph", :breed => "mastiff", :age => 2)
+      binding.pry
       expect(Dog.all.count).to eq (1)
     end
 
