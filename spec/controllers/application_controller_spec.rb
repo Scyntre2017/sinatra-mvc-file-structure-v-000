@@ -16,21 +16,27 @@ describe ApplicationController do
 
     it 'can read dog breed' do
       @dog = Dog.new("rudolph", "mastiff", 2)
+      @dog.save
       expect(@dog.breed).to eq("mastiff")
     end
 
     it 'can read dog age' do
       @dog = Dog.new("rudolph", "mastiff", 2)
+      @dog.save
       expect(@dog.age).to eq(2)
     end
     it 'can change dog name' do
       @dog = Dog.new("rudolph", "mastiff", 2)
+      @dog.save
       @dog.name = "bessie"
+      @dog.save
       expect(@dog.name).to eq("bessie")
     end
      it 'can change dog age' do
       @dog = Dog.new("rudolph", "mastiff", 2)
+      @dog.save
       @dog.age = 4
+      @dog.save
       expect(@dog.age).to eq(4)
     end
 
